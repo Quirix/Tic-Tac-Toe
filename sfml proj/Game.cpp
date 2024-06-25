@@ -45,6 +45,7 @@ void Game::pollEvent(sf::Event& event){
                         
                         if (pointExistInLevel(xPoints, oPoints, lvl) != 'n') break;
                         
+                        // 
                         
                         if (turn == 'x')
                         {
