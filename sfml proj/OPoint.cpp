@@ -25,7 +25,12 @@ OPoint::OPoint() {
     
     if (!xTexture.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Images/circle.png"))
     {
-        std::cerr << "Error in xTexture.loadFromFile(\"x.png\") class OPoint\n";
+        std::cerr << "Error in xTexture.loadFromFile(\"circle.png\") class OPoint\n";
+    }
+    
+    if (!redxTexture.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Images/orngo.png"))
+    {
+        std::cerr << "Error in xTexture.loadFromFile(\"orngo.png\") class OPoint\n";
     }
     
     xSprite.setTexture(&xTexture);
@@ -50,9 +55,8 @@ void OPoint::setPos(int x, int y, bool wdif)
 
 void OPoint::draw(sf::RenderWindow& win)
 {
-    //win.draw(line1);
-    //win.draw(line2);
-    
-    xSprite.setTexture(&xTexture);
+    if (usingTexture == 'x')
+        xSprite.setTexture(&xTexture);
+    else xSprite.setTexture(&redxTexture);
     win.draw(xSprite);
 }

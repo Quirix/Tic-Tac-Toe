@@ -11,7 +11,5 @@ constexpr float pointHeight = (WinHeight/3) - 5;
 enum GameState
 {
     STARTMENU,
-    MENU,
     RUNNING,
-    LOSEWINSCREEN
 };

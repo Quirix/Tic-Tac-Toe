@@ -24,6 +24,8 @@ public:
     //sf::RectangleShape line2;
     
     sf::Texture xTexture;
+    sf::Texture redXTexture;
+    char usingTexture = 'x';
     sf::RectangleShape xSprite;
     
 public:

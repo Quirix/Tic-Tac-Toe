@@ -10,13 +10,19 @@
 #include "constants.hpp"
 #include "Xpoint.hpp"
 #include "OPoint.hpp"
+#include "GameState.hpp"
+#include "LoseWinDrawScreen.hpp"
+#include "Mode.hpp"
+#include "NormalMode.hpp"
+#include "AIMode.hpp"
 
 #include <string>
 #include <vector>
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
-class Game {
+class GameRun : public Game {
 private:
     std::vector<sf::RectangleShape> boardRectangles;
     std::vector<XPoint> xPoints;
@@ -26,14 +32,22 @@ private:
     
     char turn = 'x';
     
+    LWD* lwd = nullptr;
+    
+    void reset();
+    
+    void changePointsOfWin();
+    
+    Mode* mode = nullptr;
+    char modechar;
+    
 public:
-    sf::RenderWindow window;
     
-    GameState state;
     
 public:
     
-    Game();
+    GameRun(sf::RenderWindow&, GameState&, SoundManager&);
+    GameRun(sf::RenderWindow&, GameState&, SoundManager&, char, int);
     
     void pollEvent(sf::Event&);
     
@@ -41,5 +55,5 @@ public:
     void draw();
     
     
-    virtual ~Game();
+    virtual ~GameRun();
 };

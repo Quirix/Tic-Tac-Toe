@@ -28,6 +28,11 @@ XPoint::XPoint() {
         std::cerr << "Error in xTexture.loadFromFile(\"x.png\") class XPoint\n";
     }
     
+    if (!redXTexture.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Images/orngx.png"))
+    {
+        std::cerr << "Error in redXTexure.loadFromFile(\"redx.png\") class XPoint\n";
+    }
+    
     xSprite.setTexture(&xTexture);
     
     xSprite.setPosition(sf::Vector2f{ (pointWidth/2.f) + (xDifference/2), (pointHeight/2.f) + (yDifference/2)} );
@@ -50,7 +55,8 @@ void XPoint::setPos(int x, int y, bool wdif)
 
 void XPoint::draw(sf::RenderWindow& win)
 {
-    xSprite.setTexture(&xTexture);
+    if (usingTexture == 'x') xSprite.setTexture(&xTexture);
+    else xSprite.setTexture(&redXTexture);
     win.draw(xSprite);
 }
 
