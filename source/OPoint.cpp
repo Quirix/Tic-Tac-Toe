@@ -23,12 +23,12 @@ OPoint::OPoint() {
     line1.rotate(45.f);
     line2.rotate(-45.f);*/
     
-    if (!xTexture.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Images/circle.png"))
+    if (!xTexture.loadFromFile("Images/circle.png"))
     {
         std::cerr << "Error in xTexture.loadFromFile(\"circle.png\") class OPoint\n";
     }
     
-    if (!redxTexture.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Images/orngo.png"))
+    if (!redxTexture.loadFromFile("Images/orngo.png"))
     {
         std::cerr << "Error in xTexture.loadFromFile(\"orngo.png\") class OPoint\n";
     }
