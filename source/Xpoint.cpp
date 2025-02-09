@@ -23,12 +23,12 @@ XPoint::XPoint() {
     line1.rotate(45.f);
     line2.rotate(-45.f);*/
     
-    if (!xTexture.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Images/x.png"))
+    if (!xTexture.loadFromFile("Images/x.png"))
     {
         std::cerr << "Error in xTexture.loadFromFile(\"x.png\") class XPoint\n";
     }
     
-    if (!redXTexture.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Images/orngx.png"))
+    if (!redXTexture.loadFromFile("Images/orngx.png"))
     {
         std::cerr << "Error in redXTexure.loadFromFile(\"redx.png\") class XPoint\n";
     }

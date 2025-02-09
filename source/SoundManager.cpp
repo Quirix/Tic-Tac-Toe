@@ -10,19 +10,19 @@
 #include <iostream>
 
 SoundManager::SoundManager() {
-    if (!buffer.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Sounds/clicksound5.wav"))
+    if (!buffer.loadFromFile("Sounds/clicksound5.wav"))
         std::cerr << "(GameRunning.cpp) error in constructor GameRun::GameRun(), sound buffer cannot load\n";
     
-    if (!buffer2.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Sounds/clicksound6.wav"))
+    if (!buffer2.loadFromFile("Sounds/clicksound6.wav"))
         std::cerr << "(GameRunning.cpp) error in constructor GameRun::GameRun(), sound buffer cannot load\n";
     
-    if (!buffer3.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Sounds/winsound.wav"))
+    if (!buffer3.loadFromFile("Sounds/winsound.wav"))
         std::cerr << "(GameRunning.cpp) error in constructor GameRun::GameRun(), sound buffer cannot load\n";
     
-    if (!buffer4.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Sounds/replaysound.wav"))
+    if (!buffer4.loadFromFile("Sounds/replaysound.wav"))
         std::cerr << "(GameRunning.cpp) error in constructor GameRun::GameRun(), sound buffer cannot load\n";
     
-    if (!buffer5.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Sounds/releaseclick.mp3"))
+    if (!buffer5.loadFromFile("Sounds/releaseclick.mp3"))
         std::cerr << "(GameRunning.cpp) error in constructor GameRun::GameRun(), sound buffer cannot load\n";
     
     clickSound.setBuffer(buffer);

@@ -7,6 +7,12 @@
 // 26/7/24
 //* fully finished the game
 
+// 4/2/2025 
+//* working on fixing problem where every image and audio is 
+//* absolute path and not relative so the source works on other machines
+//* working from windows laptop (IDEAPAD)
+//* fixed path problem + fixed image missing
+
 #include "Xpoint.hpp"
 #include "OPoint.hpp"
 #include "PointClass.hpp"
@@ -36,12 +42,12 @@ int main()
     GameRun* gameRun = nullptr;
     
     std::vector<Game*> States {startMenu, gameRun};
-    
+
     while (window.isOpen()) {
         
         Game* currentState = returnCorrectState(States, state);
         
-        if (!currentState) {
+        if (!currentState) { // github: @quirix
             if (state == RUNNING)
             {
                 if (modeGameRunning == -1) States[1] = new GameRun{window, state, soundManager};
@@ -58,7 +64,6 @@ int main()
         
         sf::Event event;
         while (window.pollEvent(event)) {
-            
             currentState->pollEvent(event);
             
         } // pollEvent
@@ -78,3 +83,4 @@ int main()
     
     return 0;
 }
+// github: @quirix

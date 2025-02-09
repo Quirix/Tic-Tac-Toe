@@ -37,7 +37,7 @@ Button::Button(const sf::Vector2f& pos, const std::string& s,sf::Color clr, char
     
     setNormalColor();
     
-    if (!font.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Roboto/Roboto-ThinItalic.ttf"))
+    if (!font.loadFromFile("Roboto/Roboto-ThinItalic.ttf"))
     {
         std::cerr << "(Button.cpp) class Button constructor Button() font cannot load.\n";
     }

@@ -27,12 +27,12 @@ StartMenu::StartMenu(sf::RenderWindow& win, GameState& currentstate, SoundManage
     
     modeGame = 4;
     
-    if (!thin.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Roboto/Roboto-Thin.ttf"))
+    if (!thin.loadFromFile("Roboto/Roboto-Thin.ttf"))
     {
         std::cerr << "ERROR font didn't load class StartMenu, in constructon StartMenu()\n";
     }
     
-    if (!bold.loadFromFile("/Users/quirixwastaken/Documents/XCode Projects/sfml proj/sfml proj/Roboto/Roboto-Bold.ttf"))
+    if (!bold.loadFromFile("Roboto/Roboto-Bold.ttf"))
     {
         std::cerr << "ERROR font didn't load class StartMenu, in constructon StartMenu()\n";
     }
